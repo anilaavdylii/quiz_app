@@ -14,7 +14,9 @@ function App() {
   const [showQuestionsPage, setShowQuestionsPage] = useState(false);
   const [showFinalPage, setShowFinalPage] = useState(false);
 
-
+  useEffect(()=>{
+    localStorage.setItem('Top Score', JSON.stringify(topScore));
+  })
 
   return (
     <>
