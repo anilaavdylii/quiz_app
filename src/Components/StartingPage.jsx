@@ -9,6 +9,8 @@ const StartingPage = ({
   topScore,
   username,
   setUsername,
+  theme, 
+  setTheme
 }) => {
   const startGame = () => {
     if (username.trim().length > 0) {
@@ -17,9 +19,17 @@ const StartingPage = ({
     }
   };
 
+
   return (
     <Card>
       <h1 className="header">Welcome to Quiz Game!</h1>
+      <label className="dropdown">
+            <select className="form-control theme" value={theme} onChange={(event)=>{ setTheme(event.target.value)}}>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+      </label>
+
       <h3 className="primary_text">Please enter your username.</h3>
       <input
         type="text"

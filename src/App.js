@@ -6,9 +6,10 @@ import StartingPage from "./Components/StartingPage";
 
 function App() {
   const [username, setUsername] = useState("");
-
   const [score, setScore] = useState(0);
   const [topScore, setTopScore] = useState(0);
+
+  const [theme, setTheme] = useState("light");
 
   const [showStartingPage, setShowStartingPage] = useState(true);
   const [showQuestionsPage, setShowQuestionsPage] = useState(false);
@@ -19,7 +20,8 @@ function App() {
   })
 
   return (
-    <>
+    <div className={theme === "light" ? "container-lg light" : "container-lg dark"} >
+
       {showStartingPage && (
         <StartingPage
           setShowStartingPage={setShowStartingPage}
@@ -27,6 +29,8 @@ function App() {
           topScore={topScore}
           username={username}
           setUsername={setUsername}
+          theme={theme}
+          setTheme={setTheme}
         />
       )}
       {showQuestionsPage && (
@@ -49,7 +53,7 @@ function App() {
           setUsername={setUsername}
         />
       )}
-    </>
+    </div>
   );
 }
 
