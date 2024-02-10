@@ -44,7 +44,7 @@
 .container-lg{
   background-color: #c1d1d6;
   height: 1000px;
-  margin-top: calc(-100vw / 2 + 1450px / 2);
+  margin-top:calc(-140vw / 2 + 1450px / 2);
   margin-bottom: calc(-100vw / 2 + 500px / 2);
 }
 
